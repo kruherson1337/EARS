@@ -20,8 +20,8 @@ public abstract class RatingBenchmarkBase<T extends TaskBase, T2 extends Algorit
     protected ArrayList<T> listOfProblems;
     protected ArrayList<T2> listOfAlgorithmsPlayers;
     protected boolean recheck = false;
-    protected boolean displayRatingIntervalChart = true;
-    public static boolean printSingleRunDuration = true;
+    protected boolean displayRatingIntervalChart = false;
+    public static boolean printSingleRunDuration = false;
     
    	// Default benchmark settings
     protected EnumStopCriteria stopCriteria = EnumStopCriteria.EVALUATIONS; 

@@ -133,7 +133,11 @@ public class DoubleSolution extends SolutionBase<Double>{
 	public double getEval() {
 		return eval;
 	}
-	
+
+	public void setEval(double eval) {
+		this.eval = eval;
+	}
+
 	public String toString() {
 	  if (constraints==null) return Util.dfcshort.format(eval)+" ["+Util.arrayToString(getDoubleVariables())+"] null?";
 	  if (constraints.length==0)

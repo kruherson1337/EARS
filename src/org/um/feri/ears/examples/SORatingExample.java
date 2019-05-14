@@ -2,12 +2,14 @@ package org.um.feri.ears.examples;
 
 import java.util.ArrayList;
 import org.um.feri.ears.algorithms.Algorithm;
+import org.um.feri.ears.algorithms.WhaleOptimizationAlgorithm;
 import org.um.feri.ears.algorithms.so.abc.ABC;
 import org.um.feri.ears.algorithms.so.cro.CRO;
 import org.um.feri.ears.algorithms.so.de.DEAlgorithm;
 import org.um.feri.ears.algorithms.so.fwa.FWA;
 import org.um.feri.ears.algorithms.so.gwo.GWO;
 import org.um.feri.ears.algorithms.so.jade.JADE;
+import org.um.feri.ears.algorithms.so.pso.PSO;
 import org.um.feri.ears.algorithms.so.random.RandomWalkAlgorithm;
 import org.um.feri.ears.algorithms.so.tlbo.TLBOAlgorithm;
 import org.um.feri.ears.benchmark.RatingBenchmark;
@@ -15,6 +17,7 @@ import org.um.feri.ears.benchmark.RatingRPUOed2;
 import org.um.feri.ears.benchmark.RatingRPUOed30;
 import org.um.feri.ears.problems.results.BankOfResults;
 import org.um.feri.ears.rating.Player;
+import org.um.feri.ears.rating.Rating;
 import org.um.feri.ears.rating.ResultArena;
 import org.um.feri.ears.util.Util;
 
@@ -33,6 +36,8 @@ public class SORatingExample {
         players.add(new RandomWalkAlgorithm());
         players.add(new DEAlgorithm(DEAlgorithm.JDE_rand_1_bin));
         players.add(new JADE());
+        players.add(new  PSO());
+        players.add(new WhaleOptimizationAlgorithm());
         ResultArena ra = new ResultArena(100); 
         RatingRPUOed2 rpuoed2 = new RatingRPUOed2(); //Create benchmark
         RatingRPUOed30 rpuoed30 = new RatingRPUOed30();

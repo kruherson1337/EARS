@@ -248,8 +248,8 @@ public abstract class RatingBenchmark extends RatingBenchmarkBase<Task, Algorith
 		// Recalculate ratings after tournament
 		// arena.recalcRatings();
 
+		arena.calculteRatings();
 		if (displayRatingIntervalChart) {
-			arena.calculteRatings();
 			displayRatingIntervalsChart(arena.getPlayers());
 		}
 
